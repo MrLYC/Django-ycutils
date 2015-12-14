@@ -1,0 +1,4 @@
+pytest==2.5.2
+astroid==1.2.1
+pylint==1.2.0
+pep8==1.4.6
