@@ -26,14 +26,16 @@ clean:
 full-clean: clean
 	@git clean -f
 
-pylint:
+pep8:
 	$(PEP8) $(SRCPATH)
+
+pylint:
 	$(PYLINT) -E $(SRCPATH)
 
 pylint-full:
 	$(PYLINT) $(SRCPATH)
 
-test: pylint
+test: pep8
 	$(PYTEST) $(SRCPATH)
 
 requires: $(ROOTPATH)/requirements.txt
